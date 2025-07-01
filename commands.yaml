@@ -1,0 +1,19 @@
+# commands.yaml
+---
+cisco_ios:
+  get_hostname: "show running-config | include hostname"
+  get_version: "show version"
+  get_interfaces: "show ip interface brief"
+  get_vlans: "show vlan brief"
+
+juniper_junos:
+  get_hostname: "show configuration system host-name"
+  get_version: "show version"
+  get_interfaces: "show interfaces terse"
+  get_vlans: "show vlans"
+
+arista_eos:
+  get_hostname: "show running-config | include hostname"
+  get_version: "show version"
+  get_interfaces: "show ip interface brief"
+  get_vlans: "show vlan"
