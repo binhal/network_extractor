@@ -46,7 +46,7 @@ class Orchestrator:
         if not device_commands:
             return json.dumps({"error": f"No commands found for {device_os}"}, indent=4)
 
-        # 3. Connect to the device
+        # 3. Connect to the device with known device type
         connector = DeviceConnector(host, username, password, device_os)
         connection = connector.connect()
         if not connection:
